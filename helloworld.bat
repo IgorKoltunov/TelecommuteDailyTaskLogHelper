@@ -1,1 +1,1 @@
-cmd /k py -i "C:\MyLocal\Projects\MethodsTraining\PythonTools\TelecommuteDailyTaskLogHelper\TelecommuteDailyTaskLogHelper.py
+cmd /k py -i "C:\nTemp\Documents\Tools\PythonTools\TelecommuteDailyTaskLogHelper\TelecommuteDailyTaskLogHelper.py
