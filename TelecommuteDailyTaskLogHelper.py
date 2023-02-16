@@ -36,7 +36,7 @@ myTime = datetime.today()
 #myTime = datetime(2021, 5, 18)
 
 quarter_of_the_year = 'Q'+str((myTime.month-1)//3+1)
-weekNumber = str(int(myTime.strftime('%U'))+1)
+weekNumber = str(int(myTime.strftime('%U')))
 
 print('-' * 106)
 print('CY' + myTime.strftime('%Y'), quarter_of_the_year, 'Week #' + weekNumber, sep=', ')
