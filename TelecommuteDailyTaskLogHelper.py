@@ -33,7 +33,7 @@ from datetime import datetime
 myTime = datetime.today()
 
 # Using Specific Date
-#myTime = datetime(2021, 4, 23)
+#myTime = datetime(2021, 5, 18)
 
 quarter_of_the_year = 'Q'+str((myTime.month-1)//3+1)
 weekNumber = str(int(myTime.strftime('%U'))+1)
