@@ -1,7 +1,19 @@
 #import pyodbc
-#from pprint import pprint as pp
+from pprint import pprint as pp
 from datetime import datetime
 
+
+def fiscal_year(myTime):
+    
+    if myTime.month in range(1,6):
+        #print('DEBUG: Month 1 to 6')
+        fiscalYear = 'FY' + str(int(myTime.year)-1)[2:] + '-' + str(myTime.year)[2:]
+
+    else:
+        #print('DEBUG: Month 7 to 12')
+        fiscalYear = 'FY' + str(int(myTime.year))[2:] + '-' + str(int(myTime.year)+1)[2:]
+
+    return fiscalYear
 
 # Generate header for today (using MS SQL Server)
 #Create connection to DB
@@ -32,14 +44,14 @@ from datetime import datetime
 # Using Today
 myTime = datetime.today()
 
-# Using Specific Date
-#myTime = datetime(2021, 5, 18)
+# DEBUG: Using Specific Date
+#myTime = datetime(2023, 7, 1)
 
 quarter_of_the_year = 'Q'+str((myTime.month-1)//3+1)
 weekNumber = str(int(myTime.strftime('%U')))
 
 print('-' * 106)
-print('CY' + myTime.strftime('%Y'), quarter_of_the_year, 'Week #' + weekNumber, sep=', ')
+print('CY' + myTime.strftime('%Y'), fiscal_year(myTime), quarter_of_the_year, 'Week #' + weekNumber, sep=', ')
 print('-' * 106)
 print(myTime.strftime('%Y%m%d - %A'))
 
