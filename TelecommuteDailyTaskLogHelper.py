@@ -48,7 +48,7 @@ myTime = datetime.today()
 #myTime = datetime(2023, 7, 1)
 
 quarter_of_the_year = 'Q'+str((myTime.month-1)//3+1)
-weekNumber = str(int(myTime.strftime('%U')))
+weekNumber = str(int(myTime.strftime('%U'))+1)
 
 print('-' * 106)
 print('CY' + myTime.strftime('%Y'), fiscal_year(myTime), quarter_of_the_year, 'Week #' + weekNumber, sep=', ')
