@@ -1,1 +1,338 @@
 -
+=
+=======================================TEST===============================================================
+(#) = F level <<--- 
+(0/1) = BOOLEAN
+* (1) 1 Connecting equipment, preparing WFH space for returning to work
+* (1) 1  Ergonomic exercises/breaks
+* (0) 1 Continuous Learning/Training
+* (0) Sorting files/folders
+* (99), 0 Compiling and verifying bid submissions
+* (0) 1 Verifying invoice and sending for payment
+* (0) 1 Following up on assignment
+* (0) 1 Verifying/researching proper APD to use and updating notes/templates for future reference
+* (0) 1 Verifying/cross referencing/3 way matching various pieces of data as part of PO creation/data entry/PDF Export/eCAPS
+* (0) 1 Researching/Collecting/Double checking RQN documentation and background information
+* (0) 1 Misc admin tasks like email, check in/check out, detailed task tracking in real time as well as for the PDF Log at the end of the day
+* (0) 1 Setting up/troubleshooting IDE environment/settings for better productivity
+* (2) 
+* (0) 1 Version tracking PO templates to reduce risk of loss or accidental modification
+* (0) 1 Following up on folder/file share permission initiative
+==========================================================================================================
+
+=======================================REFERENCE ONLY VELOW THIS LINE=====================================
+----------------------------------------------------------------------------------------------------------
+CY2024, FY24-25, Q3, Week #36
+----------------------------------------------------------------------------------------------------------
+20240905 - Thursday - WFH
+	* ITP Specific Tasks: 2508010, 2507016, 2508012 
+		* Sorting files/folders
+		* Compiling and verifying bid submissions
+		* Verifying invoice and sending for payment
+		* Following up on assignment
+		* Verifying/researching proper APD to use and updating notes/templates for future reference
+		* Verifying/cross referencing/3 way matching various pieces of data as part of PO creation/data entry/PDF Export/eCAPS
+		* Researching/Collecting/Double checking RQN documentation and background information
+	* Administrative/Misc Tasks
+		* Misc admin tasks like email, check in/check out, detailed task tracking in real time as well as for the PDF Log at the end of the day
+		* Setting up/troubleshooting IDE environment/settings for better productivity
+	* ITP General Tasks
+		* Version tracking PO templates to reduce risk of loss or accidental modification
+		* Following up on folder/file share permission initiative
+
+
+20240904 - Wednesday - WFH
+	* ITP Specific Tasks: 2508008, 2402002, 2508010, 2402018, 2507016
+		* eCAPS PO status/discrepancy research
+		* Following up with internal and external teams
+		* Researching status and providing updates
+		* Improving Oracle monthly tracking to better highlight discrepancies
+		* Compiling and verifying bid submissions
+		* Verifying and following up on invoices and payments
+		* Oracle monthly billing tracking, organizing, verifying, following up
+		* Collecting bid timeline emails as per request
+	* Administrative/Misc Tasks
+		* Following up on IT issue
+		* Planning for election work/training
+		* Organizing tasks/calendar and planning ahead
+		* IOP/FMLA and related
+		* Detailed daily task tracking in personal notes/official log
+		* Union email follow up call/clarification/research
+		* Organizing/Cleaning up Teams UI/Notifications
+		
+20240903 - Tuesday - WFH
+	* Administrative/Misc Tasks
+		* Planning/Updating task details/notes/due dates
+		* Organizing emails/notes and following up regarding FMLA/IOP and related
+		* Detailed daily task tracking in personal notes/official log
+		* Researching/Investigating/reporting/following up on suspicions email
+	* ITP Specific Tasks: 2507016, 2410016, TA692 + NC, 2402002
+		* researching status, updating tracking notes
+		* Organizing files and emails
+		* Compiling/following up regarding confirmation request email and background information/files/details
+		* Confirming and Requesting invoice
+		* Coordinating/Following up with internal/external teams
+
+20240902 - Monday - County Holiday
+		
+
+----------------------------------------------------------------------------------------------------------
+CY2024, FY24-25, Q3, Week #35
+----------------------------------------------------------------------------------------------------------
+20240830 - Friday - WFH
+	* Administrative/Misc Tasks
+		* Detailed daily task tracking in personal notes/official log
+		* Outlook folder migration
+		* Election Worker Training
+	* ITP Specific Tasks: 2507016
+		* Organizing files, folders and updating notes
+
+20240829 - Thursday - WFH
+	* Administrative/Misc Tasks
+		* Detailed daily task tracking in personal notes/official log
+		* Following up on time sheet
+		* Reaching regarding IT issue
+		* Reviewing County Election Worker Lead materials/communications/portal
+		* Planning/Sorting/Organizing tasks for the day ahead, tomorrow and next week
+		* Improving personal time tracking system
+		* Outlook Folder migration project
+		* Following up with Victor and team
+		* Setting up/configuring development tools
+		* Charitable giving follow up
+		* Strategic initiative work
+	* ITP Specific Tasks: 2508002, 2507014, 2402016, 2507016
+		* Follow-ups
+		* Verifying/Updating extended description text
+		* Organizing emails/notes
+		* Gathering/Researching requested information and following up
+		* Refreshing on/researching PO status
+		* eCAPS data entry/verification
+		* PO PDF generation/verification
+		* Approval request creation/verification
+	* ITP General Tasks
+		* Updating Extended description template
+		* Catching up on renewal notifications
+		* Approval request template update
+
+20240828 - Wednesday - WFH
+	* Administrative/Misc Tasks
+		* Detailed daily task tracking
+		* Planning/Sorting/Organizing tasks for the day/week ahead
+		* Follow-ups on misc hr related issues
+		* Verifying/submitting time sheet
+	* ITP Specific Tasks: 2508002, 2507016
+		* Following up with internal team
+		* Organizing emails/updating notes
+	* Professional Development
+		* Leadership training webinar and related
+		
+20240827 - Tuesday - WFH
+	* Administrative/Misc Tasks
+		* Detailed daily task tracking
+		* Catching up/sorting/filtering announcements/bulk/marketing emails
+		* PA158 submission/correction/follow-up
+		* IOP follow ups
+		* Learning Microsoft Tasks Outlook App
+		* Manually migrating/verifying links to key document from old laptop to new
+		* Laptpop-slowdown-issue follow up/status update
+	* ITP Specific Tasks: 2507014, 2507016, 2507019
+		* Checking payment status
+		* Following up on folder share status
+		* Organizing emails/bids and updating notes
+		* Preparing procurement document packet/folder
+		* Verifying invoice against PO and sending for payment
+		* Ranking and verifying bids
+		* Data Entry/Verification in eCAPS/text file
+		* Following up with vendor
+
+20240826 - Monday - WFH
+	* Administrative/Misc Tasks
+		* Detailed daily task tracking
+		* FMLA leave research
+		* Timesheet data entry/verification
+		* IOP
+		* Charitable Giving follow ups
+		* Available leaves follow up
+		* Reviewing County Election Worker Lead materials/communications/portal
+		* Locating availability/researching/planning County Election Worker Lead Mandatory training
+	* ITP Specific Tasks: 2403019, 2507019
+		* Following up on comfirmation/invoice/POD
+		* Organizing emails/files
+
+----------------------------------------------------------------------------------------------------------
+CY2024, FY24-25, Q3, Week #34
+----------------------------------------------------------------------------------------------------------
+20240823 - Friday - WFH
+	* Administrative/Misc Tasks
+		* Sending Check out/daily detailed log for 8/21
+		* Communocations regarding mental health emergency, FMLA and related
+		* Moving/Organizing files/software/shortcuts for laptop refresh
+		* Collecting/Verifying/Driving to drop off Charitable Giving moneys
+		* Detailed daily task tracking
+		* Following up on tranfer opportunities as instructed
+		* PTO calculation/verification as instructed
+		* FMLA leave research/refresh
+		* Setting up outlook
+		* FMLA/Related discussion with Will
+		* Organizing tasks and planning
+	* ITP Specific Tasks: 2507019, 2507014
+		* Refreshing on status, organizing/uppdating notes
+		* Following up on share folder initiative
+		* Following up on renewal confirmation
+		
+20240822 - Thursday - PTO
+	* PTO
+	
+20240821 - Wednesday - 5hrs work tw, 3 hours PTO
+	* Administrative/Misc Tasks
+		* Moving/Organizing files/software/shortcuts for laptop refresh
+
+20240820 - Tuesday
+	* WFW
+
+20240819 - Monday
+	* PTO
+----------------------------------------------------------------------------------------------------------
+CY2024, FY24-25, Q3, Week #32
+----------------------------------------------------------------------------------------------------------
+20240809 - Friday
+	* ITP Specific Tasks: TA692, 2508002, 2508012, 2507014, 2508010, 2508005, 2507016 
+		* Organizing emails and updating tracking notes
+		* Following up with internal team
+		* Researching/Preparing/Compiling Bids/PO documents 
+		* Reviewing/ranking bid responses
+		* Confirming and updating documentation for replacement item
+		* Transcribing and verifying eCAPS data based on PA 2197 forms
+		
+	* County Election Worker
+		* Checking training/assignment status
+		* Reviewing communications
+	* ITP General Tasks
+		* Updating SOP and maintaining version control management
+	
+20240808 - Thursday
+	* ITP Specific Tasks: TA692, 2508002, 2507014, 2508012
+		* Following up regarding invoicing
+		* Creating/Verifying RQN in eCAPS
+		* Clarifying/Compiling extended description
+		* Organizing/Updating tracking notes/files/emails/folders
+		* Reviewing and following up on assignments
+	* Administrative/Misc Tasks
+		* Following up on previous emails
+	* ITP General Tasks
+		* Requesting pipeline load clarification
+		* Updating PO templates
+
+20240807 - Wednesday
+	* ITP Specific Tasks: 2508005, 2508010, 2508002, 2402018, 2507019, 2508008, TA692, 2402018
+		* Following up with vendors and internal contacts
+		* Organizing emails
+		* Reviewing requirements
+		* Creating and verifying bid solicitation against quote/specs
+		* Researching/Reviewing/Compiling/Verifying/Uploading RQN packet 
+		* Clarifying responsibilities and expectations
+		* Updating tracking notes
+		* Reviewing and organizing bids
+		* Reviewing invoicing status and following up with vendor/internal team
+		* Following up on and verifying receiving
+		* Oracle Billing tracking
+		* Sending invoice for payment
+	* ITP General Tasks	
+		* Following up on APD clarification
+		* Updating notes/documentation
+		* Organizing reference emails
+
+20240806 - Tuesday
+	* WFW
+
+20240805 - Monday
+	* ITP Specific Tasks: 2507014, 2402002, 2507016, 2507019
+		* Following up with internal team/external vendors
+		* Organizing emails/files/notes
+		* Compiling and verifying re-bid solicitations/extensions
+		* Reviewing bids and following up
+	* Administrative/Misc Tasks
+		* Organizing tasks for the day
+		* Email catch up
+		* LACERA Due Diligence/Voting
+
+----------------------------------------------------------------------------------------------------------
+CY2024, FY24-25, Q3, Week #31
+----------------------------------------------------------------------------------------------------------
+20240802 - Friday
+	* ITP Specific Tasks: 2507019, 2507014, 2402002, 2507016
+		* Reviewing assignment/background documentation
+		* Organizing files, emails, notes
+		* Following up with vendors
+		* Researching/Investigating/Following up regarding part number mismatch
+		* Requesting additional renewal information
+		* Compiling and verifying quotation request to vendors
+		* Compiling PO status summary for vendor and my notes
+		* Following up on status
+	* Administrative/Misc Tasks
+		* Task catch-up/organization
+		* Reading emails/attachments
+		* Preparing for election work
+	* ITP General Tasks
+		* Updating/Verifying bid solicitation email templates
+	* Documentation/Training/Leadership Tasks 
+		* Conducting informal training for Victor on the combined hardware PO
+	
+20240801 - Thursday
+	* PTO
+
+20240731 - Wednesday
+	* ITP Specific Tasks: 2403019, 2507014, 2507016
+		* Organizing emails and files
+		* Compiling/Verifying/Sending quotation request to vendors
+		* Researching missing unit code
+		* Following up on discontinued item
+		* Following up on requirements clarification
+		* Reviewing/Researching assignment/background documentation
+	* Administrative/Misc Tasks
+		* Validating/Submitting time sheet
+		* Researching time sheet functionality
+		* Organizing Tasks and Notes
+		* Reviewing Misc Email and attachments
+		* Researching/Providing bereavement leave documentation
+		* Warrant Recipient CA ID/County Badge Call
+	* ITP General Tasks
+		* Updating/Verifying bid solicitation email template
+
+20240730 - Tuesday
+	* ITP Specific Tasks: 2507014, 2403019, 2404007, TA692
+		* Reviewing assignment
+		* Organizing emails and filesx`
+		* Compiling and verifying quotation request to vendors
+		* Researching and following up regarding invoice
+	* Administrative/Misc Tasks:
+		* Post leave email catch up/organization
+		* Monitoring and replying to email
+		* Team meetings
+	* ITP General Tasks
+		* Following up on ITP assignment email template correction
+		* Updating bid solicitation email template
+		* Updating notes for future reference
+	* County Election Worker Tasks
+		* Reviewing County Election Worker Memo
+		* Completing Poll Worker Portal Form
+	* Documentation/Training/Leadership Tasks: 1
+		* Conducting informal training for Victor on the ergo procurement process using PO Assignment and Creation SOP document
+
+20240729 - Monday
+	* ITP Specific Tasks: 2409002, 2410016, 2401005, 2402002, 2402006, 2402018, 2403013, 2403019, 2404001, 2404005, 2404011, 2408010, 2404007
+		* Refreshing on status
+		* Verifying PO payment
+		* Updating tracking notes
+		* Organizing emails
+		* Following up with vendor
+		* Researching PO status and following up
+	* Administrative/Misc Tasks:
+		* Post leave email catch up/organization
+		* Updating/Testing email filtering rules
+		* Verifying proxy time-sheet
+		* Following up on HR questions
+		* Unit Meeting
+	* Documentation/Training/Leadership Tasks:
+		* Intro call with Victor
+		* Cleaning up and sharing PO Assignment and Creation SOP with Victor
