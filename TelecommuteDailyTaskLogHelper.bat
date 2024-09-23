@@ -1,1 +1,1 @@
-cmd /k py "C:\nTemp\Documents\Tools\PythonTools\TelecommuteDailyTaskLogHelper\TelecommuteDailyTaskLogHelper.py
+cmd /k py "C:\Users\e618071\OneDrive - County of Los Angeles\Documents\Tools\PythonTools\TelecommuteDailyTaskLogHelper\TelecommuteDailyTaskLogHelper.py
