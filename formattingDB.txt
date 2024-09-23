@@ -1,23 +1,33 @@
 -
 =
 =======================================TEST===============================================================
-(#) = F level <<--- 
-(0/1) = BOOLEAN
-* (1) 1 Connecting equipment, preparing WFH space for returning to work
-* (1) 1  Ergonomic exercises/breaks
+(#) = F level <<--- Increases with the number of lines (|) and so on.
+(0/1) = UBOOLEAN
 * (0) 1 Continuous Learning/Training
-* (0) Sorting files/folders
-* (99), 0 Compiling and verifying bid submissions
-* (0) 1 Verifying invoice and sending for payment
+* (0) 1 Sorting files/folders
 * (0) 1 Following up on assignment
-* (0) 1 Verifying/researching proper APD to use and updating notes/templates for future reference
 * (0) 1 Verifying/cross referencing/3 way matching various pieces of data as part of PO creation/data entry/PDF Export/eCAPS
 * (0) 1 Researching/Collecting/Double checking RQN documentation and background information
-* (0) 1 Misc admin tasks like email, check in/check out, detailed task tracking in real time as well as for the PDF Log at the end of the day
 * (0) 1 Setting up/troubleshooting IDE environment/settings for better productivity
-* (2) 
-* (0) 1 Version tracking PO templates to reduce risk of loss or accidental modification
-* (0) 1 Following up on folder/file share permission initiative
+* (0) 1 Version tracking templates/files/folders to reduce risk of loss or accidental modification
+* (1) 1 Connecting equipment, preparing WFH space for returning to work
+* (1) 1 Ergonomic exercises/breaks
+* (1) 1 Misc admin tasks like email, check in/check out, detailed task tracking in real time as well as for the PDF Log at the end of the day
+* (0) 1 Email catch-up
+* (99) 1 Lunch
+* (99) 1 FMLA/KAISER/COLA/CHR Followups
+* (99) 1 Sorting emails related to procurement updates
+* (99) 1 Religious/Cultural practices
+=======================================FU SECN============================================================
+* (99) 0 Simulation Email Context Switch/Followup
+* (99) 0 Compiling and verifying bid submissions
+* (99) 0 Following up on folder/file share permission initiative
+* (99) 0 Intensive Email catch-up
+* (1) 0 Email Sorting
+* (99) 0 Verifying invoice and sending for payment
+* (99) 0 Verifying/researching proper APD to use and updating notes/templates for future reference
+* (99) 0 Successfully Detected Email
+* (99) 0 Post leave email reading
 ==========================================================================================================
 
 =======================================REFERENCE ONLY VELOW THIS LINE=====================================
