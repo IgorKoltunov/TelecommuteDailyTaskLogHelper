@@ -1,7 +1,7 @@
 #import pyodbc
 from pprint import pprint as pp
 from datetime import datetime
-
+quarter_of_the_year = '' # Declairing global
 
 def fiscal_year(myTime):
     
