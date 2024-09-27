@@ -92,10 +92,6 @@ else:
     myTime = datetime.today()
 
 
-
-
-#pp(commandLineArgsDic)
-
 # Using Today
 #myTime = datetime.today()
 
@@ -152,3 +148,5 @@ elif commandLineArgsDic["template"] and commandLineArgsDic["template"].lower() =
 #    cursor.execute("INSERT INTO ivk_RCOErrorChargesParsed_20200922(fileNumber, fac, uploadErrorDate, errorNumber ,errorReason, acct, chargeSvcDate, chargeCode, sourceOfRequest, quantity, creditFlag, fileName) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9], i[10], i[11])
 #    cnxn.commit()
 # cursor.close()
+
+#pp(get_file_contents('formattingDB.txt', isKeepNewLineChar=False))

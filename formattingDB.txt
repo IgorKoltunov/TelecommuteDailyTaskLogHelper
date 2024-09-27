@@ -1,7 +1,7 @@
 -
 =
 =======================================TEST===============================================================
-# (#) = F level <<--- Increases with the number of lines: ,,|,, and so on.
+# (#) = F level <<--- Increases with the number of lines
 # (0/1) = UBOOLEAN
 * (0) 1 Continuous Learning/Training
 * (0) 1 Sorting files/folders
