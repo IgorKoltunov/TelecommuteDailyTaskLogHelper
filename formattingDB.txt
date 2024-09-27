@@ -10,16 +10,20 @@
 * (0) 1 Researching/Collecting/Double checking RQN documentation and background information
 * (0) 1 Setting up/troubleshooting IDE environment/settings for better productivity
 * (0) 1 Version tracking templates/files/folders to reduce risk of loss or accidental modification
+* (0) 1 Email catch-up
+* (0) 1 Time-sheet Relates Task(s)
+* (0) 1 Updating notes/folder names
+* (0) 1 Organizing tasks, flags, tracking notes and follow ups
+* (0) 1 Providing estimates, investigating, following up
+* (1) 1 Continuous learning regarding technical aspects of IT
 * (1) 1 Connecting equipment, preparing WFH space for returning to work
 * (1) 1 Ergonomic exercises/breaks
 * (1) 1 Misc admin tasks like email, check in/check out, detailed task tracking in real time as well as for the PDF Log at the end of the day
-* (0) 1 Email catch-up
-* (0) 1 Timesheet Relates Task(s)
-* (0) 1 Updating notes/folder names
 * (9) 1 Lunch
 * (9) 1 FMLA/KAISER/COLA/CHR Followups
 * (9) 1 Sorting emails related to procurement updates
 * (9) 1 Religious/Cultural practices
+
 =======================================FU SECN============================================================
 * (9) 0 Simulation Email(s) Context Switch/Followup
 * (9) 0 Compiling and verifying bid submissions

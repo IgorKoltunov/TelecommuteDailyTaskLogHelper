@@ -1,7 +1,49 @@
 #import pyodbc
+import argparse
+from datetime import datetime, timedelta
 from pprint import pprint as pp
-from datetime import datetime
+import os
+
 quarter_of_the_year = '' # Declairing global
+
+
+def get_file_contents(fileName, isKeepNewLineChar=True):
+    if not os.path.isfile(fileName):
+        print('Critical Error: ' + fileName + ' not found.')
+        raise OSError('Critical Error:', fileName, 'not found.')
+
+    with open(fileName, 'r') as file:
+        if not isKeepNewLineChar:
+            fileContents = file.read().splitlines()
+        else:
+            fileContents = file.readlines()
+        
+    return fileContents
+
+
+def parse_cli_args():
+    """ Setup and validate command line arguments.
+
+    Returns:
+    (dict) Dictionary of supplied command line arguments.
+    """
+
+    parser = argparse.ArgumentParser(description='Email Jobs Monitoring')
+    parser.add_argument('-ds', '--days_to_subtract', required=False, metavar='',
+                        help='Specify email date to check. Format YYYYMMDD.')
+    parser.add_argument('-t', '--template', required=False, metavar='',
+                        help='Print template: 0/NULL, 1 (), S ([.....])')
+    argsDict = vars(parser.parse_args())
+
+    #if argsDict['days_to_subtract'] and argsDict['relative']:
+    #    print(red_color('Error:'), 'Use --date or --relative but not both. See usage.\n')
+    #    parser.print_help()
+    #    sys.exit()
+
+
+
+    return argsDict
+
 
 def fiscal_year(myTime):
     
@@ -41,8 +83,21 @@ def fiscal_year(myTime):
 # Generate header(No DB) (wip)
 # https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior
 
+commandLineArgsDic = parse_cli_args()
+if commandLineArgsDic["days_to_subtract"]:
+    print("Using days_to_subtract to offset")
+    days_to_subtract = int(commandLineArgsDic["days_to_subtract"])
+    myTime = datetime.today() - timedelta(days=days_to_subtract)
+else:
+    myTime = datetime.today()
+
+
+
+
+#pp(commandLineArgsDic)
+
 # Using Today
-myTime = datetime.today()
+#myTime = datetime.today()
 
 # DEBUG: Using Specific Date
 #myTime = datetime(2023, 7, 1)
@@ -54,6 +109,23 @@ print('-' * 106)
 print('CY' + myTime.strftime('%Y'), fiscal_year(myTime), quarter_of_the_year, 'Week #' + weekNumber, sep=', ')
 print('-' * 106)
 print(myTime.strftime('%Y%m%d - %A'))
+if commandLineArgsDic["template"] == '1':
+    print('''* ITP Specific Tasks: 2509010, 2508010: 2.5
+		* Organizing emails, files, tracking notes
+		* Following up on assignments
+		* Verifying and sending invoice for payment
+
+	* Administrative/Concurrent Tasks: 5
+		* Daily Tasks: Lunch/Breaks & Religious/Cultural Practices
+		* Daily Tasks: Check in/Check out, monitor, sort email
+		* County Election Worker Lead Training
+		* Updating time tracking
+		
+	* ITP General Tasks/Concurrent Tasks: 0.5
+		* Updating/organizing email templates
+          ''')
+elif commandLineArgsDic["template"] and commandLineArgsDic["template"].lower() == 's':
+    print('Under Construction!')
 
 ##################
 # REFERENCE CODE #
