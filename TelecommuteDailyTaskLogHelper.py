@@ -106,7 +106,7 @@ print('CY' + myTime.strftime('%Y'), fiscal_year(myTime), quarter_of_the_year, 'W
 print('-' * 106)
 print(myTime.strftime('%Y%m%d - %A'))
 if commandLineArgsDic["template"] == '1':
-    print('''* ITP Specific Tasks: 2509010, 2508010: 2.5
+    print('''	* ITP Specific Tasks: 2509010, 2508010: 2.5
 		* Organizing emails, files, tracking notes
 		* Following up on assignments
 		* Verifying and sending invoice for payment
@@ -122,6 +122,12 @@ if commandLineArgsDic["template"] == '1':
           ''')
 elif commandLineArgsDic["template"] and commandLineArgsDic["template"].lower() == 's':
     print('Under Construction!')
+    taskStringList = get_file_contents('formattingDB.txt')
+
+    #pp(taskStringList[5:25])
+    print('	* ITP Specific Tasks: 2509010, 2508010: 2.5')
+    print('\t' * 2 + taskStringList[5])
+
 
 ##################
 # REFERENCE CODE #
