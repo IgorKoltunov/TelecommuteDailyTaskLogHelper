@@ -3,6 +3,7 @@ import argparse
 from datetime import datetime, timedelta
 from pprint import pprint as pp
 import os
+import time
 
 quarter_of_the_year = '' # Declairing global
 
@@ -83,50 +84,62 @@ def fiscal_year(myTime):
 # Generate header(No DB) (wip)
 # https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior
 
-commandLineArgsDic = parse_cli_args()
-if commandLineArgsDic["days_to_subtract"]:
-    print("Using days_to_subtract to offset")
-    days_to_subtract = int(commandLineArgsDic["days_to_subtract"])
-    myTime = datetime.today() - timedelta(days=days_to_subtract)
-else:
-    myTime = datetime.today()
 
 
-# Using Today
-#myTime = datetime.today()
+def main():
+    
+    commandLineArgsDic = parse_cli_args()
+    if commandLineArgsDic["days_to_subtract"]:
+        print("Using days_to_subtract to offset")
+        days_to_subtract = int(commandLineArgsDic["days_to_subtract"])
+        myTime = datetime.today() - timedelta(days=days_to_subtract)
+    else:
+        myTime = datetime.today()
 
-# DEBUG: Using Specific Date
-#myTime = datetime(2023, 7, 1)
 
-quarter_of_the_year = 'Q'+str((myTime.month-1)//3+1)
-weekNumber = str(int(myTime.strftime('%U'))+1)
+    # Using Today
+    #myTime = datetime.today()
 
-print('-' * 106)
-print('CY' + myTime.strftime('%Y'), fiscal_year(myTime), quarter_of_the_year, 'Week #' + weekNumber, sep=', ')
-print('-' * 106)
-print(myTime.strftime('%Y%m%d - %A'))
-if commandLineArgsDic["template"] == '1':
-    print('''	* ITP Specific Tasks: 2509010, 2508010: 2.5
-		* Organizing emails, files, tracking notes
-		* Following up on assignments
-		* Verifying and sending invoice for payment
+    # DEBUG: Using Specific Date
+    #myTime = datetime(2023, 7, 1)
 
-	* Administrative/Concurrent Tasks: 5
-		* Daily Tasks: Lunch/Breaks & Religious/Cultural Practices
-		* Daily Tasks: Check in/Check out, monitor, sort email
-		* County Election Worker Lead Training
-		* Updating time tracking
-		
-	* ITP General Tasks/Concurrent Tasks: 0.5
-		* Updating/organizing email templates
-          ''')
-elif commandLineArgsDic["template"] and commandLineArgsDic["template"].lower() == 's':
-    print('Under Construction!')
-    taskStringList = get_file_contents('formattingDB.txt')
+    quarter_of_the_year = 'Q'+str((myTime.month-1)//3+1)
+    weekNumber = str(int(myTime.strftime('%U'))+1)
 
-    #pp(taskStringList[5:25])
-    print('	* ITP Specific Tasks: 2509010, 2508010: 2.5')
-    print('\t' * 2 + taskStringList[5])
+    print('-' * 106)
+    print('CY' + myTime.strftime('%Y'), fiscal_year(myTime), quarter_of_the_year, 'Week #' + weekNumber, sep=', ')
+    print('-' * 106)
+    print(myTime.strftime('%Y%m%d - %A'))
+    if commandLineArgsDic["template"] == '1':
+        print('''	* ITP Specific Tasks: 2509010, 2508010: 2.5
+            * Organizing emails, files, tracking notes
+            * Following up on assignments
+            * Verifying and sending invoice for payment
+
+        * Administrative/Concurrent Tasks: 5
+            * Daily Tasks: Lunch/Breaks & Religious/Cultural Practices
+            * Daily Tasks: Check in/Check out, monitor, sort email
+            * County Election Worker Lead Training
+            * Updating time tracking
+            
+        * ITP General Tasks/Concurrent Tasks: 0.5
+            * Updating/organizing email templates
+            ''')
+    elif commandLineArgsDic["template"] and commandLineArgsDic["template"].lower() == 's':
+        print('Under Construction!')
+        taskStringList = get_file_contents('formattingDB.txt')
+
+        #pp(taskStringList[5:25])
+        print('	* ITP Specific Tasks: 2509010, 2508010: 2.5')
+        print('\t' * 2 + taskStringList[5])
+
+if __name__ == '__main__':
+        main()
+
+
+
+
+
 
 
 ##################
