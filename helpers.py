@@ -13,21 +13,21 @@ def parse_cli_args():
     (dict) Dictionary of supplied command line arguments.
     """
 
-    parser = argparse.ArgumentParser(description='Email Jobs Monitoring')
-    parser.add_argument('-ds', '--days_to_subtract', required=False, metavar='',
-                        help='Specify email date to check. Format YYYYMMDD.')
-    parser.add_argument('-rd', '--relative', required=False, metavar='',
-                        help='Check relative date. Format -x where x is number of days in the past from today.')
+    parser = argparse.ArgumentParser(description='Command Line Argument Parser')
+    parser.add_argument('-da', '--days_to_adjust', required=False, metavar='',
+                        help='Add or subtract days. Example: -ds 1')
+    parser.add_argument('-t', '--template', required=False, metavar='',
+                        help='Print template: 0/NULL, 1 (), S ([.....])')
     argsDict = vars(parser.parse_args())
 
-    #if argsDict['days_to_subtract'] and argsDict['relative']:
+    #if argsDict['days_to_adjust'] and argsDict['relative']:
     #    print(red_color('Error:'), 'Use --date or --relative but not both. See usage.\n')
     #    parser.print_help()
     #    sys.exit()
 
-
-
     return argsDict
+
+
 def parse_cli_args_Complicated():
     """ Setup and validate command line arguments.
 

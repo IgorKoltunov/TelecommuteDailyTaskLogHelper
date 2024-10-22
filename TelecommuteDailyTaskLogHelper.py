@@ -7,29 +7,6 @@ import helpers
 
 quarter_of_the_year = '' # Declairing global
 
-
-def parse_cli_args():
-    """ Setup and validate command line arguments.
-
-    Returns:
-    (dict) Dictionary of supplied command line arguments.
-    """
-
-    parser = argparse.ArgumentParser(description='Command Line Argument Parser')
-    parser.add_argument('-da', '--days_to_adjust', required=False, metavar='',
-                        help='Add or subtract days. Example: -ds 1')
-    parser.add_argument('-t', '--template', required=False, metavar='',
-                        help='Print template: 0/NULL, 1 (), S ([.....])')
-    argsDict = vars(parser.parse_args())
-
-    #if argsDict['days_to_adjust'] and argsDict['relative']:
-    #    print(red_color('Error:'), 'Use --date or --relative but not both. See usage.\n')
-    #    parser.print_help()
-    #    sys.exit()
-
-    return argsDict
-
-
 def fiscal_year(myTime):
     
     if myTime.month in range(1,6):
@@ -45,11 +22,11 @@ def fiscal_year(myTime):
 
 def main():
     
-    commandLineArgsDic = parse_cli_args()
+    commandLineArgsDic = helpers.parse_cli_args()
     if commandLineArgsDic["days_to_adjust"]:
         print("Using days_to_adjust to offset")
         days_to_adjust = int(commandLineArgsDic["days_to_adjust"])
-        myTime = datetime.today() - timedelta(days=days_to_adjust)
+        myTime = datetime.today() + timedelta(days=days_to_adjust)
     else:
         myTime = datetime.today()
 
