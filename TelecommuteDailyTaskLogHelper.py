@@ -1,25 +1,11 @@
-#import pyodbc
 import argparse
 from datetime import datetime, timedelta
 from pprint import pprint as pp
 import os
 import time
+import helpers
 
 quarter_of_the_year = '' # Declairing global
-
-
-def get_file_contents(fileName, isKeepNewLineChar=True):
-    if not os.path.isfile(fileName):
-        print('Critical Error: ' + fileName + ' not found.')
-        raise OSError('Critical Error:', fileName, 'not found.')
-
-    with open(fileName, 'r') as file:
-        if not isKeepNewLineChar:
-            fileContents = file.read().splitlines()
-        else:
-            fileContents = file.readlines()
-        
-    return fileContents
 
 
 def parse_cli_args():
@@ -29,19 +15,17 @@ def parse_cli_args():
     (dict) Dictionary of supplied command line arguments.
     """
 
-    parser = argparse.ArgumentParser(description='Email Jobs Monitoring')
-    parser.add_argument('-ds', '--days_to_subtract', required=False, metavar='',
-                        help='Specify email date to check. Format YYYYMMDD.')
+    parser = argparse.ArgumentParser(description='Command Line Argument Parser')
+    parser.add_argument('-da', '--days_to_adjust', required=False, metavar='',
+                        help='Add or subtract days. Example: -ds 1')
     parser.add_argument('-t', '--template', required=False, metavar='',
                         help='Print template: 0/NULL, 1 (), S ([.....])')
     argsDict = vars(parser.parse_args())
 
-    #if argsDict['days_to_subtract'] and argsDict['relative']:
+    #if argsDict['days_to_adjust'] and argsDict['relative']:
     #    print(red_color('Error:'), 'Use --date or --relative but not both. See usage.\n')
     #    parser.print_help()
     #    sys.exit()
-
-
 
     return argsDict
 
@@ -58,41 +42,14 @@ def fiscal_year(myTime):
 
     return fiscalYear
 
-# Generate header for today (using MS SQL Server)
-#Create connection to DB
-# cnxn = pyodbc.connect("Driver={SQL Server Native Client 11.0};"
-#                       "Server=110HSAESSDBPW10;"
-#                       "Database=HSAFSBPHI;"
-#                       "Trusted_Connection=yes;")
-# cursor = cnxn.cursor()
-#
-# for resultRow in cursor.execute("""
-#                                 -- Using Today
-#                                 SELECT 
-#                                     FORMAT (GETDATE(), 'yyyyMMdd') AS [Todays Date]
-#                                     ,DATEPART(YEAR, GETDATE()) AS [Callendar Year]
-#                                     ,DATEPART(QUARTER, GETDATE()) as [Quarter of CY]
-#                                     ,DATEDIFF(week, (SELECT DATEADD(yy, DATEDIFF(yy, 0, GETDATE()), 0)), GETDATE()) + 1 as [Week Number]
-#                                     ,DATENAME(DW, GETDATE()) as [Week Day Name];"""):
-#     #pp(cursor.description)
-#     #print(resultRow)
-#     print('-' * 106)
-#     print('CY{}, Q{}, Week #{}'.format(resultRow[1], resultRow[2], resultRow[3]))
-#     print('-' * 106)
-#     print('{} - {}'.format(resultRow[0], resultRow[4]))
-
-# Generate header(No DB) (wip)
-# https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior
-
-
 
 def main():
     
     commandLineArgsDic = parse_cli_args()
-    if commandLineArgsDic["days_to_subtract"]:
-        print("Using days_to_subtract to offset")
-        days_to_subtract = int(commandLineArgsDic["days_to_subtract"])
-        myTime = datetime.today() - timedelta(days=days_to_subtract)
+    if commandLineArgsDic["days_to_adjust"]:
+        print("Using days_to_adjust to offset")
+        days_to_adjust = int(commandLineArgsDic["days_to_adjust"])
+        myTime = datetime.today() - timedelta(days=days_to_adjust)
     else:
         myTime = datetime.today()
 
@@ -127,7 +84,7 @@ def main():
             ''')
     elif commandLineArgsDic["template"] and commandLineArgsDic["template"].lower() == 's':
         print('Under Construction!')
-        taskStringList = get_file_contents('formattingDB.txt')
+        taskStringList = helpers.get_file_contents('formattingDB.txt')
 
         #pp(taskStringList[5:25])
         print('	* ITP Specific Tasks: 2509010, 2508010: 2.5')
@@ -135,37 +92,3 @@ def main():
 
 if __name__ == '__main__':
         main()
-
-
-
-
-
-
-
-##################
-# REFERENCE CODE #
-##################
-# Generate for specific day (wip)
-# for resultRow in cursor.execute("""
-#                         DECLARE @DateString VARCHAR(10) 
-#                         SET @DateString = '04/01/2021' 
-#                         SELECT 
-# 	                        @DateString as [Selected Date] 
-# 	                        ,DATEPART(YEAR, @DateString) AS [Callendar Year] 
-# 	                        ,DATEPART(QUARTER, @DateString) as [Quarter of CY]  
-# 	                        ,DATEDIFF(week, (SELECT DATEADD(yy, DATEDIFF(yy, 0, @DateString), 0)), @DateString) + 1 as [Week Number];"""):
-#     pp(cursor.description)
-#     print(resultRow)
-
-# for i in cursor.execute('SELECT \
-# 	DATEPART(YEAR, GETDATE()) AS [Callendar Year] \
-# 	,DATEPART(QUARTER, GETDATE()) as [Quarter of CY] \
-# 	,DATEDIFF(week, (SELECT DATEADD(yy, DATEDIFF(yy, 0, GETDATE()), 0)), GETDATE()) + 1 as [Week Number];'):
-#     print(i)
-
-# for i in errorTupList:
-#    cursor.execute("INSERT INTO ivk_RCOErrorChargesParsed_20200922(fileNumber, fac, uploadErrorDate, errorNumber ,errorReason, acct, chargeSvcDate, chargeCode, sourceOfRequest, quantity, creditFlag, fileName) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9], i[10], i[11])
-#    cnxn.commit()
-# cursor.close()
-
-#pp(get_file_contents('formattingDB.txt', isKeepNewLineChar=False))
