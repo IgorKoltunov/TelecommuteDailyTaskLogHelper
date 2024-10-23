@@ -2,8 +2,9 @@ from datetime import datetime, timedelta
 from pprint import pprint as pp
 import helpers
 import sys
+from collections import OrderedDict
 ''' 1. Extract tasks for the day. [x]
-    2. Parse the text into dict structure
+    2. Parse the text into dict structure [ ]
     3. Shuffle tasks and sections. [ ] '''
 
 def main():
@@ -20,6 +21,10 @@ def main():
     nextSectionStartString = ''
     toDoSectionEndIndex = 0
 
+    
+
+    
+    
         
     # Strart Index
     for index, i in enumerate(taskStringList):
@@ -48,13 +53,38 @@ def main():
              
              
     
-
+    # DEBUG CODE: KEEP FOR NOW
     #print('toDoSectionStart:', toDoSectionStartIndex)
     #print('nextSectionStartString:', nextSectionStartString)
     #print('toDoSectionEnd:', toDoSectionEndIndex)
     #pp(taskStringList[toDoSectionStartIndex:toDoSectionEndIndex])
+    
     for i in taskStringList[toDoSectionStartIndex:toDoSectionEndIndex]:
         print(i)
+"""     
+    ATTEMPTS AT THE PARSING.
+
+    n = 0
+    logEntryStructureDic = OrderedDict()
+    logEntryStructureDic['Date - Weekday'] = OrderedDict()
+    logEntryStructureDic['Date - Weekday']['Project1'] = OrderedDict()
+    topLevelString = ''
+    projectString
+    
+    for index, i in enumerate(taskStringList[toDoSectionStartIndex:toDoSectionEndIndex]):
+        if index == 0:
+            topLevelString = i
+            
+        if i[:2] == '\t*':
+            if n == 0:
+                projectString = i
+                logEntryStructureDic[{topLevelString['Project1']
+                n += 1
+
+    pp(logEntryStructureDic) """
+    
+    
+
 
 if __name__ == '__main__':
         main()
