@@ -3,6 +3,8 @@ from pprint import pprint as pp
 import helpers
 import sys
 from collections import OrderedDict
+import sqlite3
+
 ''' 1. Extract tasks for the day. [x]
     2. Parse the text into dict structure [ ]
     3. Shuffle tasks and sections. [ ] '''
@@ -61,7 +63,12 @@ def main():
     
     for i in taskStringList[toDoSectionStartIndex:toDoSectionEndIndex]:
         print(i)
-"""     
+"""
+    con = sqlite3.connect("tutorial.db")
+    cur = con.cursor()
+    cur.execute("CREATE TABLE LogEntries(date, project, entry)")
+
+     
     ATTEMPTS AT THE PARSING.
 
     n = 0
@@ -82,8 +89,8 @@ def main():
                 n += 1
 
     pp(logEntryStructureDic) """
-    
-    
+
+
 
 
 if __name__ == '__main__':
