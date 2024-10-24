@@ -45,19 +45,19 @@ def main():
     print('-' * 106)
     print(myTime.strftime('%Y%m%d - %A'))
     if commandLineArgsDic["template"] == '1':
-        print('''	* ITP Specific Tasks: 2509010, 2508010: 2.5
-            * Organizing emails, files, tracking notes
-            * Following up on assignments
-            * Verifying and sending invoice for payment
+        print('''    * ITP Specific Tasks: 2509010, 2508010: 2.5
+        * Organizing emails, files, tracking notes
+        * Following up on assignments
+        * Verifying and sending invoice for payment
 
-        * Administrative/Concurrent Tasks: 5
-            * Daily Tasks: Lunch/Breaks & Religious/Cultural Practices
-            * Daily Tasks: Check in/Check out, monitor, sort email
-            * County Election Worker Lead Training
-            * Updating time tracking
+    * Administrative/Concurrent Tasks: 5
+        * Daily Tasks: Lunch/Breaks & Religious/Cultural Practices
+        * Daily Tasks: Check in/Check out, monitor, sort email
+        * County Election Worker Lead Training
+        * Updating time tracking
             
-        * ITP General Tasks/Concurrent Tasks: 0.5
-            * Updating/organizing email templates
+    * ITP General Tasks/Concurrent Tasks: 0.5
+        * Updating/organizing email templates
             ''')
     elif commandLineArgsDic["template"] and commandLineArgsDic["template"].lower() == 's':
         print('Under Construction!')
