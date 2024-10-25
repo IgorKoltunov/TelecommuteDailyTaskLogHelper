@@ -6,7 +6,7 @@ from collections import OrderedDict
 import sqlite3
 
 ''' 1. Extract tasks for the day. [x]
-    2. Parse the text into dict structure [ ]
+    2. Parse the text into db structure [x]
     3. Shuffle tasks and sections. [ ] '''
 
 def main():
@@ -23,11 +23,6 @@ def main():
     nextSectionStartString = ''
     toDoSectionEndIndex = 0
 
-    
-
-    
-    
-        
     # Strart Index
     for index, i in enumerate(taskStringList):
         #pp(i[:8])
@@ -61,34 +56,47 @@ def main():
     #print('toDoSectionEnd:', toDoSectionEndIndex)
     #pp(taskStringList[toDoSectionStartIndex:toDoSectionEndIndex])
     
-    for i in taskStringList[toDoSectionStartIndex:toDoSectionEndIndex]:
-        print(i)
-"""
-    con = sqlite3.connect("tutorial.db")
+    #for i in taskStringList[toDoSectionStartIndex:toDoSectionEndIndex]:
+    #    pp(i)
+
+    con = sqlite3.connect("LogEntries.db")
     cur = con.cursor()
-    cur.execute("CREATE TABLE LogEntries(date, project, entry)")
+    #cur.execute("CREATE TABLE LogEntries(date, project, entry)")
 
      
-    ATTEMPTS AT THE PARSING.
+    #ATTEMPTS AT THE PARSING.
 
-    n = 0
+    """ n = 0
     logEntryStructureDic = OrderedDict()
     logEntryStructureDic['Date - Weekday'] = OrderedDict()
     logEntryStructureDic['Date - Weekday']['Project1'] = OrderedDict()
     topLevelString = ''
-    projectString
+    projectString """
     
     for index, i in enumerate(taskStringList[toDoSectionStartIndex:toDoSectionEndIndex]):
         if index == 0:
-            topLevelString = i
+            topLevelString = i.strip()
             
         if i[:2] == '\t*':
-            if n == 0:
-                projectString = i
-                logEntryStructureDic[{topLevelString['Project1']
-                n += 1
+            projectString = i.strip()
+            #cur.execute("""INSERT INTO LogEntries VALUES(
+            #                'topLevelString'
+            #                ,''
+            #                ,'WIP')
+            #            """)
 
-    pp(logEntryStructureDic) """
+            cur.execute('INSERT INTO LogEntries VALUES (?,?,?)', (topLevelString, projectString, projectString))
+
+
+            #cur.execute("INSERT INTO LogEntries VALUES('" /
+            #                + topLevelString + "','"
+            #                + projectString + "','"
+            #                + "'WIP')")
+                        
+            
+              
+    for i in cur.execute('SELECT * FROM LogEntries'):
+        print(i)
 
 
 
