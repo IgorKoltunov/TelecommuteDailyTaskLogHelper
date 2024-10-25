@@ -63,29 +63,29 @@ def main():
     cur = con.cursor()
     #cur.execute("CREATE TABLE LogEntries(date, project, entry)")
 
-     
-    #ATTEMPTS AT THE PARSING.
-
-    """ n = 0
-    logEntryStructureDic = OrderedDict()
-    logEntryStructureDic['Date - Weekday'] = OrderedDict()
-    logEntryStructureDic['Date - Weekday']['Project1'] = OrderedDict()
     topLevelString = ''
-    projectString """
-    
+    projectString = ''
+    taskString = ''
+
     for index, i in enumerate(taskStringList[toDoSectionStartIndex:toDoSectionEndIndex]):
         if index == 0:
             topLevelString = i.strip()
             
         if i[:2] == '\t*':
             projectString = i.strip()
+
             #cur.execute("""INSERT INTO LogEntries VALUES(
             #                'topLevelString'
             #                ,''
             #                ,'WIP')
             #            """)
 
-            cur.execute('INSERT INTO LogEntries VALUES (?,?,?)', (topLevelString, projectString, projectString))
+        if  i[:3] == '\t\t*':
+            taskString = i.strip()
+            
+            cur.execute('INSERT INTO LogEntries VALUES (?,?,?)', (topLevelString, 
+                                                                    projectString, 
+                                                                    taskString))
 
 
             #cur.execute("INSERT INTO LogEntries VALUES('" /
@@ -95,7 +95,7 @@ def main():
                         
             
               
-    for i in cur.execute('SELECT * FROM LogEntries'):
+    for i in cur.execute('SELECT entry FROM LogEntries'):
         print(i)
 
 
