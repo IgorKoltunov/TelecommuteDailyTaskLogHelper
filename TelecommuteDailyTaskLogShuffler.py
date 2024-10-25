@@ -47,17 +47,6 @@ def main():
     for index, i in enumerate(taskStringList):
         if i == nextSectionStartString:
              toDoSectionEndIndex = index
-             
-             
-    
-    # DEBUG CODE: KEEP FOR NOW
-    #print('toDoSectionStart:', toDoSectionStartIndex)
-    #print('nextSectionStartString:', nextSectionStartString)
-    #print('toDoSectionEnd:', toDoSectionEndIndex)
-    #pp(taskStringList[toDoSectionStartIndex:toDoSectionEndIndex])
-    
-    #for i in taskStringList[toDoSectionStartIndex:toDoSectionEndIndex]:
-    #    pp(i)
 
     con = sqlite3.connect("LogEntries.db")
     cur = con.cursor()
