@@ -84,11 +84,17 @@ def main():
                         
             
               
-    for i in cur.execute('SELECT entry FROM LogEntries'):
+    for i in cur.execute('''SELECT 
+                                entry 
+                            FROM 
+                                LogEntries 
+                            WHERE
+                                date = "20241028 - Monday"'''):
         print(i)
 
-
-
+    con.commit() 
+    con.close()
+  
 
 if __name__ == '__main__':
         main()
