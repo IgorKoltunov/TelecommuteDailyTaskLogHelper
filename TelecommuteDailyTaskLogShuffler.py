@@ -84,12 +84,13 @@ def main():
                         
             
               
-    for i in cur.execute('''SELECT 
-                                entry 
+    for i in cur.execute('''SELECT DISTINCT
+                                date
+                                ,project 
                             FROM 
                                 LogEntries 
                             WHERE
-                                date = "20241028 - Monday"'''):
+                                date LIKE "20241029%"'''):
         print(i)
 
     con.commit() 
