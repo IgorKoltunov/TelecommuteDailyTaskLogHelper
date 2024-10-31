@@ -1,8 +1,5 @@
-import argparse
 from datetime import datetime, timedelta
 from pprint import pprint as pp
-import os
-import time
 import helpers
 
 quarter_of_the_year = '' # Declairing global
@@ -43,21 +40,16 @@ def main():
     print('-' * 106)
     print('CY' + myTime.strftime('%Y'), fiscal_year(myTime), quarter_of_the_year, 'Week #' + weekNumber, sep=', ')
     print('-' * 106)
-    print(myTime.strftime('%Y%m%d - %A'))
+    print(myTime.strftime('%Y%m%d - %A'), '8(H/O/ooo)')
     if commandLineArgsDic["template"] == '1':
-        print('''    * ITP Specific Tasks: 2509010, 2508010: 2.5
-        * Organizing emails, files, tracking notes
-        * Following up on assignments
-        * Verifying and sending invoice for payment
+        print(' '* 4 + '''* ITP Specific Tasks: 0000000, 0000000: x.x
+        * ENTTRY1
 
-    * Administrative/Concurrent Tasks: 5
-        * Daily Tasks: Lunch/Breaks & Religious/Cultural Practices
-        * Daily Tasks: Check in/Check out, monitor, sort email
-        * County Election Worker Lead Training
-        * Updating time tracking
+    * Administrative/Concurrent Tasks: x.x
+        * ENTTRY1
             
-    * ITP General Tasks/Concurrent Tasks: 0.5
-        * Updating/organizing email templates
+    * ITP General Tasks/Concurrent Tasks: x.x
+        * ENTTRY1
             ''')
     elif commandLineArgsDic["template"] and commandLineArgsDic["template"].lower() == 's':
         print('Under Construction!')

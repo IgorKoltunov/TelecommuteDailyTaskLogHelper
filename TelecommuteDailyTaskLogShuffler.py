@@ -2,7 +2,6 @@ from datetime import datetime, timedelta
 from pprint import pprint as pp
 import helpers
 import sys
-from collections import OrderedDict
 import sqlite3
 
 ''' 1. Extract tasks for the day. [x]
@@ -36,6 +35,7 @@ def main():
     # End Index
     for index, i in enumerate(taskStringList[toDoSectionStartIndex+1:]):
         #pp(i[:8])
+        #TODO: Explain what I am doing here
         try: 
             if int(i[:8]):
                 #print(i)
@@ -50,7 +50,12 @@ def main():
 
     con = sqlite3.connect("LogEntries.db")
     cur = con.cursor()
-    #cur.execute("CREATE TABLE LogEntries(date, project, entry)")
+    
+    #TODO: Temporary handling of attempt at creating a duplicate db
+    try:
+        cur.execute("CREATE TABLE LogEntries(date, project, entry)")
+    except:
+        pass 
 
     topLevelString = ''
     projectString = ''
@@ -60,8 +65,10 @@ def main():
         if index == 0:
             topLevelString = i.strip()
             
-        if i[:2] == '\t*':
+        # Handling both cases where tabs or spaces are used
+        if i[:2] == '\t*' or i[:5] == ' ' * 4 + '*':
             projectString = i.strip()
+            pp(i[:5]) 
 
             #cur.execute("""INSERT INTO LogEntries VALUES(
             #                'topLevelString'
@@ -90,7 +97,7 @@ def main():
                             FROM 
                                 LogEntries 
                             WHERE
-                                date LIKE "20241029%"'''):
+                                date LIKE "20241030%"'''):
         print(i)
 
     con.commit() 
