@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 from pprint import pprint as pp
-import helpers
+import dev.helpers
 import sys
 import sqlite3
 
@@ -9,7 +9,7 @@ import sqlite3
     3. Shuffle tasks and sections. [ ] '''
 
 def main():
-    taskStringList = helpers.get_file_contents('C:\\Users\\e618071\\OneDrive - County of Los Angeles\\Documents\\HR\\DailyTeleworkLog\\PWL20240923toPresent.txt', isKeepNewLineChar=False)
+    taskStringList = dev.helpers.get_file_contents('C:\\Users\\e618071\\OneDrive - County of Los Angeles\\Documents\\HR\\DailyTeleworkLog\\PWL20240923toPresent.txt', isKeepNewLineChar=False)
           
     # Confirm that today's date exists
     # TODO: Make work for relative dates

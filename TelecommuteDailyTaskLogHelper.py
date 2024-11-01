@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 from pprint import pprint as pp
-import helpers
+import dev.helpers
 
 quarter_of_the_year = '' # Declairing global
 
@@ -19,7 +19,7 @@ def fiscal_year(myTime):
 
 def main():
     
-    commandLineArgsDic = helpers.parse_cli_args()
+    commandLineArgsDic = dev.helpers.parse_cli_args()
     if commandLineArgsDic["days_to_adjust"]:
         print("Using days_to_adjust to offset")
         days_to_adjust = int(commandLineArgsDic["days_to_adjust"])
@@ -53,7 +53,7 @@ def main():
             ''')
     elif commandLineArgsDic["template"] and commandLineArgsDic["template"].lower() == 's':
         print('Under Construction!')
-        taskStringList = helpers.get_file_contents('formattingDB.txt')
+        taskStringList = dev.helpers.get_file_contents('dev\\formattingDB.txt')
 
         #pp(taskStringList[5:25])
         print('	* ITP Specific Tasks: 2509010, 2508010: 2.5')
